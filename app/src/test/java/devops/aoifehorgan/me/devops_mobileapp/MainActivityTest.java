@@ -4,21 +4,42 @@ import org.junit.Test;
 
 import static org.junit.Assert.*;
 
-/**
- * Created by Aoife Horgan on 04/04/2018.
- */
 public class MainActivityTest {
-    MainActivity activity = new MainActivity();
-    String add = activity.ADD;
-    String minus = activity.SUB;
-    String mul = activity.MUL;
-    String div = activity.DIV;
+    private MainActivity activity = new MainActivity();
+    private String add = MainActivity.ADD;
+    private String minus = MainActivity.SUB;
+    private String mul = MainActivity.MUL;
+    private String div = MainActivity.DIV;
     @Test
     public void applyOperation() throws Exception {
+       checkAddition();
+       checkSubtraction();
+       checkMultiplication();
+       checkDivision();
+    }
+    @Test
+    public void checkAddition() throws Exception {
         double actual = activity.applyOperation(add,2,2);
         double expected = 4;
         assertEquals("Failed",expected,actual,0.001);
-
+    }
+    @Test
+    public void checkSubtraction() throws Exception {
+        double actual = activity.applyOperation(minus,2,2);
+        double expected = 0;
+        assertEquals("Failed",expected,actual,0.001);
+    }
+    @Test
+    public void checkMultiplication() throws Exception {
+        double actual = activity.applyOperation(mul,2,4);
+        double expected = 8;
+        assertEquals("Failed",expected,actual,0.001);
+    }
+    @Test
+    public void checkDivision() throws Exception {
+        double actual = activity.applyOperation(div,4,2);
+        double expected = 2;
+        assertEquals("Failed",expected,actual,0.001);
     }
 
     @Test
@@ -35,14 +56,20 @@ public class MainActivityTest {
 
     @Test
     public void display() throws Exception {
+
     }
 
     @Test
     public void endsWithNumber() throws Exception {
+        boolean actual = activity.endsWithNumber();
+        //int expected = false;
+        assertFalse("222E",actual);
     }
 
     @Test
     public void endsWithOperator() throws Exception {
+        boolean actual =activity.endsWithOperator();
+        assertFalse(actual);
     }
 
     @Test
@@ -55,6 +82,8 @@ public class MainActivityTest {
 
     @Test
     public void resetCalculator() throws Exception {
+        activity.resetCalculator();
+
     }
 
 
