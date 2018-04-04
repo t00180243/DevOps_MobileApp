@@ -1,10 +1,14 @@
 apply plugin: 'com.android.application'
+apply plugin: 'jacoco'
+apply plugin: 'com.github.kt3k.coveralls'
+apply plugin: 'org.sonarqube'
 
 android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "devops.aoifehorgan.me.devops_mobileapp"
         minSdkVersion 21
+        //noinspection OldTargetApi
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -16,6 +20,16 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+    testOptions.unitTests.all {
+        testLogging {
+            events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+            exceptionFormat 'full'
+        }
+        maxHeapSize = '2048m'
+        maxParallelForks = 1
+        forkEvery = 1
+    }
+    testOptions.unitTests.includeAndroidResources true
 }
 
 dependencies {
@@ -25,4 +39,33 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+task jacocoTestReport(type: JacocoReport, dependsOn: ['testDebugUnitTest']) {
+    reports {
+        xml.enabled true
+        xml.destination file("${buildDir}/reports/jacoco/test/jacocoTestReport.xml")
+        html.destination file("${buildDir}/reports/coverage")
+    }
+
+    executionData = files "${buildDir}/jacoco/testDebugUnitTest.exec"
+    sourceDirectories = files android.sourceSets.main.java.srcDirs
+    classDirectories = fileTree(dir: "${buildDir}/intermediates/classes/debug",
+            exclude: ['**/R.class', '**/R$*.class'])
+
+    doLast {
+        println "coveralls report has been generated to file://${buildDir}/reports/jacoco/test/jacocoTestReport.xml"
+        println "coverage report generated at file://${reports.html.destination}/index.html"
+    }
+}
+
+sonarqube{
+    properties{
+        //def libraries = project.android.sdkDirectory.getPath() + "/platforms/android-26/android.jar"/* + ", build/intermediates/exploded-aar*//**//*classes.jar"*/
+        property "sonar.projectName", "DevOps_MobileApp"
+        property "sonar.projectKey", "devops_mobileapp12"
+        property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.organization", "t00180243-github"
+        property "sonar.sources", "src/main/java"
+        property "sonar.login", "a84aba6df1fe997a7ccc024857b9acb2598bf786"
+    }
 }
