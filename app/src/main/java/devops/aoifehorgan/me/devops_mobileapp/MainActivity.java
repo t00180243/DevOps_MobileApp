@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.TextView;
 
+@SuppressWarnings("ALL")
 public class MainActivity extends Activity {
 
     public static final String ADD = "\u002B";
@@ -16,7 +17,7 @@ public class MainActivity extends Activity {
     public static final String DIV = "\u00F7";
     public static final String MUL = "\u2715";
     public String value = "";
-    public LinkedList<String> operators = new LinkedList<String>();
+    public LinkedList<String> operators = new LinkedList<>();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -105,7 +106,7 @@ public class MainActivity extends Activity {
         value += op;
     }
 
-    private void safelyPlaceOperator(String op)
+    public void safelyPlaceOperator(String op)
     {
         if (endsWithOperator())  // Avoid double operators by replacing operator.
         {
@@ -143,8 +144,9 @@ public class MainActivity extends Activity {
 
     public boolean endsWithOperator()
     {
-        if (value.endsWith(ADD) || value.endsWith(SUB) || value.endsWith(MUL) || value.endsWith(DIV)) return true;
-        else return false;
+        if (value.endsWith(ADD) || value.endsWith(SUB) || value.endsWith(MUL) || value.endsWith(DIV)) {
+            return true;
+        } else return false;
     }
 
     public int findLastOperator()

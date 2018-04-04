@@ -1,5 +1,7 @@
 package devops.aoifehorgan.me.devops_mobileapp;
 
+import android.view.View;
+
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -42,16 +44,20 @@ public class MainActivityTest {
         assertEquals("Failed",expected,actual,0.001);
     }
 
-    @Test
-    public void onCreate() throws Exception {
-    }
+
 
     @Test
     public void onCreateOptionsMenu() throws Exception {
+        assertTrue(true);
     }
 
     @Test
     public void registerKey() throws Exception {
+        activity.safelyPlaceOperator("0");
+        activity.safelyPlaceOperator("1");
+        activity.safelyPlaceOperator(minus);
+        activity.safelyPlaceOperator(add);
+
     }
 
     @Test
