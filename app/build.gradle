@@ -65,7 +65,7 @@ sonarqube{
         property "sonar.projectKey", "devops_mobileapp12"
         property "sonar.host.url", "https://sonarcloud.io"
         property "sonar.organization", "t00180243-github"
-        property "sonar.sources", "src/main/java"
+        property "sonar.sources", "."
         property "sonar.login", "a84aba6df1fe997a7ccc024857b9acb2598bf786"
     }
 }
