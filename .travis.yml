@@ -57,4 +57,4 @@ after_success:
 deploy:
   provider: gae
   keyfile: "CalculatorMobileApp-4e324a15967d.json"
-  project: "CalculatorMobileApp"
+  project: "calculatormobileapp-200317"
