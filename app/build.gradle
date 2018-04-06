@@ -4,6 +4,14 @@ apply plugin: 'com.github.kt3k.coveralls'
 apply plugin: 'org.sonarqube'
 
 android {
+    signingConfigs {
+        config {
+            keyAlias 'MyAndroidKey'
+            keyPassword 'fifi111222333'
+            storeFile file('C:/Users/Aoife Horgan/Desktop/keystore.jks')
+            storePassword 'Fifi12345'
+        }
+    }
     compileSdkVersion 26
     defaultConfig {
         applicationId "devops.aoifehorgan.me.devops_mobileapp"
@@ -18,6 +26,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
         }
     }
     testOptions.unitTests.all {
@@ -33,7 +42,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation 'com.android.support:appcompat-v7:26.1.0'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //noinspection GradleDynamicVersion
