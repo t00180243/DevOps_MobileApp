@@ -89,13 +89,13 @@ after_success:
    - sonar-scanner
 
 
-deploy:
-  provider: heroku
-  api_key:
-    secure: "c3578822-2ed0-48f5-a159-7d89fc4d5c59"
-  app: calculator-mobileapplication
-  on:
-    all_branches: true
+#deploy:
+  #provider: heroku
+  #api_key:
+    #secure: "c3578822-2ed0-48f5-a159-7d89fc4d5c59"
+  #app: calculator-mobileapplication
+  #on:
+    #all_branches: true
 
 
 
