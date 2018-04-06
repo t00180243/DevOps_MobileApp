@@ -58,3 +58,4 @@ deploy:
   provider: gae
   keyfile: "CalculatorMobileApp-4e324a15967d.json"
   project: "calculatormobileapp-200317"
+  config: "app.iml"
