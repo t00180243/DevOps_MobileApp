@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "calculatormobileapp-200317",
+  "private_key_id": "4e324a15967df2bfae7458fd59f3a6a1ddcfd674",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDfBFgps6IBs/d0\n91APE26bN0BRL85RSz0ReZyuLhk2mMvXKdDWX+QYDTSyypplsog98a65Nf1OZYqv\nQ+bKa9U66La3uy5EfjTJnEwQ2DVmZOWmANGjKcu1OQhFwn8YZelJvLVCBbPYSWNE\n8pWDqDKaf8ZJm4C3xWGEmLsZWPT/Omn5hEGulilVB/yew/SXYSI6yWaDvB+3a5gP\nIzRxzagf4GwpNpiEzSuYXkBjro5RNuAlLwxIurrOSHw6KckAKKJgofIVCbrXGpyp\n4CPk4lhmu1+OiMTto8t2MaFctWzyj6eZjx7ViGyLbACYbotHoucZH0evBccJmZhn\nF47uOJhpAgMBAAECggEAFDSmzzpu/HQDgNWya3dBf28hVOm9qehk80sfKrnS/3sX\nBtrLSMz9078IjgVkuT+Ub/ZQdAfj+CEjkE8Y3zCnbFOu0FU1cy+zFSwjySfpqKoO\nE30CAWQ1SGlPKlDdpoZ/PTbLflyZZ4h4pcPLz5ai5RQcEUm1PxEzTWnwE7MXWXNU\nXmJdMW0/qUyidL+lZ3E370Skatx+B6BYpQVzUgpYgJm58YltLp4V/oJDYlMjUH30\n1yiXV3RXSKS+1m5sAHpis3VlvcuXG7zj41nooODWTQ49fya7djexAnh8b0cEarpC\nc6qtayr+pOdfvylceWGXPmrH/tVcS0VVd9KtSXkhvQKBgQDzJUDqdxm8Xiwjpm1y\nfYTKTqmLmE06Kj8X+AeB9WDhCU83g8p4mjMJz1x/TxPla7Mznu3J39wWVcR1g431\nPUCkMgt80PeYQS5C/TF97FCLeQti/kx+z14r/NSBfFDXs/MdSztl2wDoXuqOrPBz\nic701Ky/lLA+Ymu1WMEKVhbcjQKBgQDqzqt1JZij0yMKDLGwC8HVarxv5lxD7wE5\nSsPyDtf1CghhrZvdLJDQhaQVPDQQZZVhIns55IYC7GIeLmaFB12DjQ6WJ09vwZvJ\nUYxMUxxA2FKcOBnBnA+n8GFMxLR8ghaIx1Iia6dEXppx0kQnCVma5YUmXovwKf4H\n6WTQ9tXKTQKBgEoQT/zbuKgrW3CkknQsjdV+LqEKDIQqODvZ3peUoiUKS+oSKAui\nlOdpFbjl4p6gtt6Di9VRbl4TVBujrgtE1Drvz5X+pVzohen77CZ6ZHKHtZM6+Rwr\nmHj3s9eZgZqjAuwqbXZyRo2B1BsPzNK06KilW9WjuifWnQ6JcYvve1lFAoGBALS4\nlnyWkDHfCoPsm0Ic+nYRLbGOgosCxFVdNwzx4cNGkobjgSgs6dSkV1LEwGmyVdOq\nH1/ChGZxm18RZXST46Shh42H+frQ79919V61RPSfyo1UHHbIb8BZIfpdF3ERCtkB\nWDUH2Hilu4dJR40oBCBU8TND577UAyIBv8eZg5itAoGBAIrrT8wuvykvC69FqNW/\n1D4xHl0rup9yI77ANtp2qR6N4rsGR0SdcID2Co8LDu1YBaWws7jTVaiNItvjaaSj\n7qXRL57/BMVirvIyw4wV4mEN8ZUCHDJkrHatiQlsd4Ir2CBo/b4Dcry+C7yk4LYf\nygcEV8sb3CWWXLcGehgNcLz4\n-----END PRIVATE KEY-----\n",
+  "client_email": "calculatormobileapp@calculatormobileapp-200317.iam.gserviceaccount.com",
+  "client_id": "108173376812913410663",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/calculatormobileapp%40calculatormobileapp-200317.iam.gserviceaccount.com"
+}
