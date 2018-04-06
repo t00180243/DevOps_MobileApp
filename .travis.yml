@@ -54,8 +54,12 @@ after_success:
 - "./gradlew jacocoTestReport coveralls"
 - codecov
 - sonar-scanner
+#deploy:
+  #provider: testfairy
+    #api-key: "a318a4d10fbe3a8121febce3180c00c2436f0389"
+    #app-file: Path to the app file (APK/IPA)
 deploy:
-  provider: gae
-  keyfile: "CalculatorMobileApp-4e324a15967d.json"
-  project: "calculatormobileapp-200317"
-  config: "app/app.iml"
+provider: releases
+  api_key:
+    secure: "fa5622c45a5ec14ff15f8c0c8e57b3fea539f2c0"
+    file: "apk/calculator.apk"
