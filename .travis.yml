@@ -14,6 +14,7 @@ env:
   - ADB_INSTALL_TIMEOUT=5
   - ANDROID_ABI=armeabi-v7a
   - ANDROID_TAG=google_apis
+  - secure: E8gyIMzqj8VUHFyoHVQyrFgGCvQ2Txn28HwfkrVY5qDxtEG+R22FQl2dE/eTvhQm79Whxm8yLWPRo29PGZzPLdnrs5vAdZUAZYjn9sn+8C3MTQ5Hl0U/ZmqN9i8wN6OBLyf0ZBgXO/N9aRQKJXZBFFitlWGWoDv8TzgDQOjKiDKyuVC/v+SaXTnju2LcG6722BPirxtdy9Kttuwyh9YEvEihfPwYaPYAls7Gj3w33I4FHvVBZLV3i9iXC5hbBaV8TSaYP5f8w+xgRisgMILcZgD/CiOz2oazftqI36/zFTVVZxdMxKoC1Pj4VW6yZjBRDlSAiPKjm8QYHp/Pq3EkE2Mg6Fez5xcU5wMDFTFj8RXg39E9nGnXtLMBcdCxLJ4xBVL912/Ggg423icuYH+2pfaR0pRFDyTmaSbKsg0pvPdBnBiWG9hPnKeI2BD4c6LxGXBR9GpYBIDC5uhz1E94Lb5+6vADDB1Hr0Bi6NW3LxzP0fn8jvZalOgsgKw4GYuH1SLr5BNUhAXFQzt3e6jnNQEEKewm36LLcAZlYWE35u+PCszujJdP4nc6b4XamByOaz3m3+zYRdf3TETVljIGX81olpVCHWpXQeuUV1/hBwpHwdWsmOlaJmBRd1mGC7h0+V0shkG6rzRQxQtmTO/+Q520hrELiKtaNzCGhaKJJFw=
 android:
   components:
   - tools
@@ -54,8 +55,6 @@ after_success:
 - codecov
 - sonar-scanner
 deploy:
-  provider: heroku
-  api_key:
-    secure: N/0tNGz86WeynWlo4GJe+4cNOuNB4fygi9sdVeDVkvbUTPNPywbWVm4+1K0odarqVcN1+znKAymLZwp+pzjsAhscFpbpC2o3C4YUKHZoCNjvLMYZeP5oM0zghu+yN8WWEMh5Ucys375FSQZ1+4/SuTXgoxwasBoxYrwhAIyI5u/NaAio5qF/NTQ8MjiAuBHfGHeouwISd5sT7jCHeOKLfuz6ovDy1pAajQ32zaKxuS8iOwm+sA8tfOz5Ns+i9PgxQ86wLwZZERyTZ9JdQayr/kTjeLx50QfDUDhstoT/sC83RJ/1JwrIfmfy5XtFYKb+TzHz1jDVmblWH/U7beTM6wvLzasCAgs8fJRTmzj0cyyRUJpgxRlMEgj/UOkisl1mfAG7nKMWT86FrTTxcMRO4Q7V6vkCM0yLn0gRktCb0eYCuYaB6XNfJ4YVe3zOO6rgEFlDmy8S5Td8k9S7YGT14yJlqUClDhzzGYjdh6yOMdH1amBaBhit1W2pZaPXlG/NKhjdrcGCY9hM0ak4Um/tj6fTkP2+0knTOZASYC+gWp1bSvn5RLx2H4FrkrOTKQncHrRPEXZSv7pHHj/1DVApR3OBvTJkhat0bY3c+Lv9r5Cdu8Dr8ijGpKK20ge525leSu/Avw8JeNRmlZbFbRUhpx5Zxceu//p2KAUOJBhZCf4=
-  app: calculator-mobileapplication
-
+  provider: gae
+  keyfile: "CalculatorMobileApp-4e324a15967d.json"
+  project: "CalculatorMobileApp"
