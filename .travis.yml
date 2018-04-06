@@ -54,14 +54,13 @@ after_success:
 - "./gradlew jacocoTestReport coveralls"
 - codecov
 - sonar-scanner
-deploy:
-  provider: testfairy
-  api-key: "a318a4d10fbe3a8121febce3180c00c2436f0389"
-  app-file: app/build/outputs/apk/debug/app-debug.apk
-  skip_cleanup: true
-  on:
-      tags: true
 #deploy:
- # provider: releases
-  #api_key: "fa5622c45a5ec14ff15f8c0c8e57b3fea539f2c0"
+  #provider: testfairy
+  #api-key: "a318a4d10fbe3a8121febce3180c00c2436f0389"
+  #app-file: app/build/outputs/apk/debug/app-debug.apk
+  #skip_cleanup: true
+
+deploy:
+  provider: releases
+  api_key: "fa5622c45a5ec14ff15f8c0c8e57b3fea539f2c0"
 
