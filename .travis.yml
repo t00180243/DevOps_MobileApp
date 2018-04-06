@@ -59,4 +59,4 @@ deploy:
   api-key:
     secure: fQNOi5gygAGY+K1fCHwXCwYZNG4VW+WGzigQ3zfJ5rOG6Y1KIDk2bprmtnzooJ7s4qx2YJVsCwT/ML1M+VFs4WigllXX0+mLSBal1JTaYQ5Hf4dMrFI3KVWpRbh9cEW/OT+podDxYM8o9BbFbhiMEb2HPM4cLttd0xoNUHwOTQ0LFyTx30udp956B/hGuKtNt5fnKza0dz9Gy4GU28xGhQuiZxE3NAITu4Di7J1VzDHm8sXa/JOk37mM3mfXkLrUxNmQcvLtmBSu0tKf3N2N+/WgkcwMvjaSK5s60Vq9Osr1ckOvuMPlhd0AIGXsZGpgWc0bKqQf+2F5lUKF6TirQefb+bGlEBY7Ht3dJTLUQ0ne0PLPW/H9Pe6c+Oz5bX3ML1VWPS9EyuNK0iZEznBor2GVWq5dZK0H6F9pPjbleWzNAkQbOMoU3dTW5ubNgFTZC6UXFhc1bOP/N90gOwPflAKNvO8J3ZjcWJK2l8ayQ7Av/eNBq/7/Bs7pSZ0mCmWrRmAu4QNP1/STwjJa7KiFeIWTkfr254W88QwZssRJ3lFIB9hNvo79fg66hg6LOi8ZO9VuchZDOuYzLwgtAUC6llxwKojPO7PpnrkMl36t04d2IlJwgYCscEN9/SK5YnblcEo6ptXETYqxI2lDlE8+F4aqt7vdBCsnQP063bP8RiE=
   app-file: app/build/outputs/apk/debug/app-debug.apk
-  keystore-file: C:\Users\Aoife Horgan\Desktop\keystore.jks
+  keystore-file: C:\\keystore.jks

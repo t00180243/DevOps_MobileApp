@@ -8,7 +8,7 @@ android {
         config {
             keyAlias 'MyAndroidKey'
             keyPassword 'fifi111222333'
-            storeFile file('C:/Users/Aoife Horgan/Desktop/keystore.jks')
+            storeFile file('C:/keystore.jks')
             storePassword 'Fifi12345'
         }
     }
@@ -26,6 +26,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
             signingConfig signingConfigs.config
         }
     }
