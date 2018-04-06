@@ -60,6 +60,5 @@ after_success:
     #app-file: Path to the app file (APK/IPA)
 deploy:
   provider: releases
-    api_key:
-      secure: "fa5622c45a5ec14ff15f8c0c8e57b3fea539f2c0"
-    file: "apk/calculator.apk"
+  api_key: "fa5622c45a5ec14ff15f8c0c8e57b3fea539f2c0"
+
