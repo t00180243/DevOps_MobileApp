@@ -48,8 +48,8 @@ addons:
 before_script:
 - android list targets
 - android list sdk --extended --no-ui --all
-script:
-- "./gradlew assembleDebug && ./gradlew lintDebug &&./gradlew testDebug && ./gradle assembleRelease"
+#script:
+#- "./gradlew assembleDebug && ./gradlew lintDebug &&./gradlew testDebug && ./gradle assembleRelease"
 after_success:
 - "./gradlew jacocoTestReport coveralls"
 - codecov
