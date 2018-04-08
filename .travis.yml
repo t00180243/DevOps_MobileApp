@@ -53,7 +53,7 @@ before_script:
 - android list targets
 - android list sdk --extended --no-ui --all
 - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
-#script:
+script:
 "./gradlew assembleDebug && ./gradlew lintDebug &&./gradlew testDebug"
 after_success:
 - "./gradlew jacocoTestReport coveralls"
