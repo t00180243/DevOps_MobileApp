@@ -41,7 +41,7 @@ android:
 before_install:
 - mkdir "$ANDROID_HOME/licenses" || true
 - chmod +x gradlew
--openssl aes-256-cbc -K $encrypted_6cae81c4f41c_key -iv $encrypted_6cae81c4f41c_iv -in keystore.jks.enc -out keystore.jks -d
+#-openssl aes-256-cbc -K $encrypted_6cae81c4f41c_key -iv $encrypted_6cae81c4f41c_iv -in keystore.jks.enc -out keystore.jks -d
 - "./gradlew dependencies || true"
 - pip install --user codecov
 addons:
@@ -63,9 +63,9 @@ after_success:
 before_deploy:
 - cp $TRAVIS_BUILD_DIR/.keystore.jks $HOME
 - cd app/build/outputs/apk/
-#- jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $HOME/keystore.jks -storepass $storepass -keypass $keypass app-release-unsigned.apk calculator_keystore
+- jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $HOME/keystore.jks -storepass $storepass -keypass $keypass app-release-unsigned.apk calculator_keystore
 # Verification
-#- jarsigner -verify app-release-unsigned.apk
+- jarsigner -verify app-release-unsigned.apk
 - "${ANDROID_HOME}/build-tools/24.0.2/zipalign -v 4 app-release-unsigned.apk calculator.apk"
 
 deploy:
