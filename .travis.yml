@@ -54,15 +54,15 @@ before_script:
 - android list sdk --extended --no-ui --all
 - echo no | android create avd --force -n test -t android-21 --abi armeabi-v7a
 script:
-"./gradlew assembleDebug && ./gradlew lintDebug &&./gradlew testDebug"
+- "./gradlew assembleDebug && ./gradlew lintDebug &&./gradlew testDebug"
 after_success:
 - "./gradlew jacocoTestReport coveralls"
 - codecov
 - sonar-scanner
 
-before_deploy:
-- cp $TRAVIS_BUILD_DIR/.keystore.jks $HOME
-- cd app/build/outputs/apk/
+#before_deploy:
+#- cp $TRAVIS_BUILD_DIR/.keystore.jks $HOME
+#- cd app/build/outputs/apk/
 #- jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore $HOME/keystore.jks -storepass $storepass -keypass $keypass app-release-unsigned.apk calculator_keystore
 # Verification
 #- jarsigner -verify app-release-unsigned.apk
